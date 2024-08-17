@@ -1,19 +1,18 @@
 package com.example.frontendcommunityapp;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class CommunityApp extends Application {
 
-    UserInterface userInterface = new UserInterface();
-
     @Override
     public void start(Stage stage) throws IOException {
-        Scene scene = new Scene(userInterface.createContent());
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 680, 400);
         stage.setTitle("CommunityApp");
         stage.setScene(scene);
         stage.show();
