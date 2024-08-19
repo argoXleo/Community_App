@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.frontendcommunityapp.LoginController"
+      fx:controller="com.example.frontendcommunityapp.View.LoginController"
       style="-fx-background-color: #87BEEB;">
 
     <padding>

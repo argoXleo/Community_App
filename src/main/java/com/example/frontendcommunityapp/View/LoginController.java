@@ -1,4 +1,4 @@
-package com.example.frontendcommunityapp;
+package com.example.frontendcommunityapp.View;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

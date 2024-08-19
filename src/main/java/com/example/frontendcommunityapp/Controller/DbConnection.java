@@ -1,4 +1,4 @@
-package com.example.frontendcommunityapp;
+package com.example.frontendcommunityapp.Controller;
 
 import java.sql.*;
 
@@ -31,6 +31,17 @@ public class DbConnection {
         }
 
         return null;
+    }
+
+    public int updateDataBase(String query){
+        try {
+            Statement statement = getStatement();
+            return statement.executeUpdate(query);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
+        return 0;
     }
 
     public static void main(String[] args) {
