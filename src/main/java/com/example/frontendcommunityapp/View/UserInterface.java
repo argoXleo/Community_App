@@ -1,16 +1,28 @@
 package com.example.frontendcommunityapp.View;
 
+import com.example.frontendcommunityapp.Controller.Login;
+import com.example.frontendcommunityapp.Model.Resident;
+import com.mysql.cj.protocol.x.XMessage;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javax.swing.JLabel;
+import javax.swing.SwingUtilities;
+
+
 
 public class UserInterface {
 
     public GridPane loginPage;
     public GridPane helloPage;
+
+    Resident loggedInResident;
+
 
     public UserInterface(){
         createLoginPage();
@@ -35,8 +47,30 @@ public class UserInterface {
         PasswordField passwordField = new PasswordField();
         loginPage.add(passwordField, 1, 1);
 
+        Label messageLabel = new Label("Hi");
+        loginPage.add(messageLabel, 0,2);
+
         Button loginButton = new Button("Ingresar");
         loginPage.add(loginButton, 1, 2);
+
+        loginButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                String nombre = userNameField.getText();
+                String pass = passwordField.getText();
+                Login login = new Login();
+                loggedInResident = (Resident) login.userLogin(nombre, pass);
+                if(loggedInResident != null){
+                    messageLabel.setText("Welcome: " + loggedInResident.getNombre());
+                }
+                else{
+                    messageLabel.setText("Login Failed, provide correct credentialsl");
+                }
+            }
+        });
+
+
+
     }
 
     private void createHelloPage(){
