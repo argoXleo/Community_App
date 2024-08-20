@@ -13,10 +13,26 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javax.swing.JLabel;
 import javax.swing.SwingUtilities;
-
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 
 public class UserInterface {
+    @FXML
+    private Label messageLabel;
+
+    @FXML
+    private Button loginButton;
+
+    @FXML
+    private TextField userNameField;
+
+    @FXML
+    private PasswordField passwordField;
 
     public GridPane loginPage;
     public GridPane helloPage;
@@ -35,23 +51,20 @@ public class UserInterface {
         loginPage.setHgap(10);
         loginPage.setVgap(10);
 
-        Label userNameLabel = new Label("Usuario:");
-        loginPage.add(userNameLabel, 0, 0);
+        //Label userNameLabel = new Label("Usuario:");
+        //loginPage.add(userNameLabel, 0, 0);
 
-        TextField userNameField = new TextField();
-        loginPage.add(userNameField, 1, 0);
+        //TextField userNameField = new TextField();
+        //loginPage.add(userNameField, 1, 0);
 
-        Label passwordLabel = new Label("Contraseña:");
-        loginPage.add(passwordLabel, 0, 1);
+        //Label passwordLabel = new Label("Contraseña:");
+        //loginPage.add(passwordLabel, 0, 1);
 
-        PasswordField passwordField = new PasswordField();
-        loginPage.add(passwordField, 1, 1);
+        //PasswordField passwordField = new PasswordField();
+        //loginPage.add(passwordField, 1, 1);
 
-        Label messageLabel = new Label("Hi");
-        loginPage.add(messageLabel, 0,2);
-
-        Button loginButton = new Button("Ingresar");
-        loginPage.add(loginButton, 1, 2);
+        //Button loginButton = new Button("Ingresar");
+        //loginPage.add(loginButton, 1, 2);
 
         loginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override

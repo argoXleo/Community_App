@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.frontendcommunityapp.View.LoginController"
+      fx:controller="com.example.frontendcommunityapp.LoginController"
       style="-fx-background-color: #87BEEB;">
 
     <padding>
@@ -32,6 +32,8 @@
         <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
         <PasswordField fx:id="passwordField" promptText="Escriba su contraseña" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-        <Button text="Ingresar" onAction="#handleLoginButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Label fx:id="mylabel" text = "Hi!" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+        <Button fx:id="loginButton" text="Ingresar" onAction="#handleLoginButtonAction" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
     </GridPane>
 </VBox>
