@@ -7,11 +7,13 @@ import java.sql.ResultSet;
 
 public class Pago extends Services {
 
-    private double cantidad;
+    private String cantidad;
     private String concepto;
     private String resident;
 
-    public Pago(int id, String name, double cantidad, String concepto, String resident) {
+
+
+    public Pago(int id, String name, String cantidad, String concepto, String resident) {
 
         super(id, name);
         this.cantidad = cantidad;
@@ -20,7 +22,19 @@ public class Pago extends Services {
 
     }
 
-    public void registarPagoDB(String cantidad, String concepto, String username ){
+    public String getCantidad() {
+        return this.cantidad;
+    }
+
+    public String getConcepto() {
+        return this.concepto;
+    }
+
+    public String getResident() {
+        return this.resident;
+    }
+
+    public void registrarPagoDB(String cantidad, String concepto, String username ){
 
         String query = "INSERT INTO pago(cantidad, concepto, username) VALUES( '"+cantidad+"', '"+concepto+"','"+username+"')";
         DbConnection connection = new DbConnection();
@@ -36,9 +50,10 @@ public class Pago extends Services {
 
     }
 
+
     public static void main(String[] args) {
-        Pago pago1 = new Pago(12,"Pago", 12312, "hola","Jax");
-        pago1.registarPagoDB(String.valueOf(pago1.cantidad), pago1.concepto, pago1.resident );
+        Pago pago1 = new Pago(12,"Pago", "12312", "hola","Jax");
+        pago1.registrarPagoDB(pago1.cantidad, pago1.concepto, pago1.resident );
         System.out.println("Yes");
     }
 
