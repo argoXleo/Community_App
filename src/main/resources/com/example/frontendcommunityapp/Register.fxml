@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.RegisterController">
+   <children>
+      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #246861;">
+         <children>
+            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="99.0" layoutY="28.0" text="Registro de usuario">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label layoutX="50.0" layoutY="95.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldNombre" layoutX="50.0" layoutY="115.0" />
+      <Label layoutX="50.0" layoutY="152.0" text="Telefono">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldTelefono" layoutX="50.0" layoutY="172.0" />
+      <Label layoutX="50.0" layoutY="214.0" text="Email">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldEmail" layoutX="50.0" layoutY="234.0" />
+      <Label layoutX="50.0" layoutY="276.0" text="Contraseña">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="294.0" layoutY="118.0" text="Username">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldUsername" layoutX="294.0" layoutY="138.0" />
+      <Label layoutX="294.0" layoutY="192.0" text="Numero de Torre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldTorre" layoutX="294.0" layoutY="212.0" />
+      <Label layoutX="294.0" layoutY="264.0" text="Numero de Apto">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="textFieldApto" layoutX="294.0" layoutY="284.0" />
+      <RadioButton fx:id="radioButtonAdmin" layoutX="59.0" layoutY="361.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Admin" />
+      <RadioButton fx:id="radioButtonResident" layoutX="217.0" layoutY="361.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Resident" />
+      <RadioButton fx:id="radioButtonVigilante" layoutX="358.0" layoutY="361.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Vigilante" />
+      <Button fx:id="buttonRegistrar" onAction="#registrarUsuario" layoutX="222.0" layoutY="409.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="76.0" text="Registrar" />
+      <PasswordField fx:id="passwordField" layoutX="46.0" layoutY="297.0" />
+   </children>
+</AnchorPane>

@@ -1,7 +1,11 @@
 package com.example.frontendcommunityapp;
 
+import com.example.frontendcommunityapp.Controller.DbConnection;
 import com.example.frontendcommunityapp.Controller.Login;
+import com.example.frontendcommunityapp.Model.Users.Admin;
 import com.example.frontendcommunityapp.Model.Users.Resident;
+import com.example.frontendcommunityapp.Model.Users.Vigilante;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,6 +18,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class LoginController {
 
@@ -21,7 +28,8 @@ public class LoginController {
     private Scene scene;
     private Parent root;
 
-    private Resident loggedInResident;
+    private Admin loggedInAdmin;
+    private Vigilante loggedVigilante;
 
     @FXML
     private Label mylabel;
@@ -36,15 +44,38 @@ public class LoginController {
     private Button loginButton;
 
     @FXML
-    public void handleLoginButtonAction(javafx.event.ActionEvent actionEvent) throws IOException {
+    private Button registroButton;
+
+    @FXML
+    public void handleLoginButtonAction(javafx.event.ActionEvent actionEvent) throws IOException, SQLException {
         String nombre = userNameField.getText();
         String pass = passwordField.getText();
         Login login = new Login();
-        loggedInResident = (Resident) login.userLogin(nombre, pass);
-        if (loggedInResident != null) {
+        Resident loggedInResident = (Resident) login.userLogin(nombre, pass);
+
+        /*
+        String query = "SELECT * FROM usuarios WHERE Resident= '1' ";
+
+        DbConnection connection = new DbConnection();
+        ResultSet rs = connection.getQueryTable(query);
+
+        && rs.getString("Resident") == "1"
+
+        DbConnection connection = new DbConnection();
+        String query = "SELECT Resident FROM usuarios WHERE Resident ='1'";
+        try {
+            ResultSet rs = connection.getQueryTable(query);
+            System.out.println(rs.getString("Resident"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        */
+
+
+        if (loggedInResident != null  ) {
             mylabel.setText("Welcome: " + loggedInResident.getNombre());
             try {
-                root  = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+                root  = FXMLLoader.load(getClass().getResource("Services.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -53,27 +84,29 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
 
-        } else {
+        } //else if (loggedInAdmin) {}
+
+        else {
             mylabel.setText("Login Failed, provide correct credentials");
         }
 
     }
-        // Logica del botón
-        /*
-        String username = userNameField.getText();
-        String password = passwordField.getText();
-
-
-        if (authenticateUser(username, password)) {
-            System.out.println("Bienvenido, " + username + "!");
-        } else {
-            System.out.println("Credenciales incorrectas");
-        }
-    } */
 
     private boolean authenticateUser(String username, String password) {
 
         return true;
     }
 
+    public void switchRegisterPage(javafx.event.ActionEvent actionEvent) throws IOException {
+        try {
+            root  = FXMLLoader.load(getClass().getResource("Register.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
 }

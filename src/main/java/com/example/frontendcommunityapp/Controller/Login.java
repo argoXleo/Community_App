@@ -19,7 +19,12 @@ public class Login {
                 return new Resident(rs.getInt("id_usuario"),
                                     rs.getString("nombre"),
                                     rs.getString("telefono"),
-                                    rs.getString("email"));
+                                    rs.getString("email"),
+                                    rs.getString("password"),
+                                    rs.getString("username"),
+                                    rs.getString("numero_torre"),
+                                    rs.getString("numero_apartamento"));
+
             }
 
         }catch (Exception e){
