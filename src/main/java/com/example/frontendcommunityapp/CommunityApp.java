@@ -14,7 +14,7 @@ public class CommunityApp extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 680, 400);//fxmlLoader.load()
+        Scene scene = new Scene(root);//fxmlLoader.load()
         stage.setTitle("CommunityApp");
         stage.setScene(scene);
         stage.show();

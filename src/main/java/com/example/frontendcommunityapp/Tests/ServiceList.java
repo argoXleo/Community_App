@@ -1,3 +1,4 @@
+
 package com.example.frontendcommunityapp.Tests;
 
 import com.example.frontendcommunityapp.Model.Services.Pago;
@@ -11,7 +12,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 
 public class ServiceList {
-
+/*
     private TableView<Services> serviceTable;
 
     private VBox createTable(){
@@ -38,5 +39,7 @@ public class ServiceList {
 
 
     }
+    */
+
 }
 
