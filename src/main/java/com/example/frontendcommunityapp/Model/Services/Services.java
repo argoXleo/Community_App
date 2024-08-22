@@ -1,4 +1,4 @@
-package com.example.frontendcommunityapp.Model;
+package com.example.frontendcommunityapp.Model.Services;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;

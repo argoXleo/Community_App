@@ -1,7 +1,7 @@
 package com.example.frontendcommunityapp.Controller;
 
-import com.example.frontendcommunityapp.Model.Resident;
-import com.example.frontendcommunityapp.Model.User;
+import com.example.frontendcommunityapp.Model.Users.Resident;
+import com.example.frontendcommunityapp.Model.Users.User;
 
 
 import java.sql.ResultSet;

@@ -1,4 +1,4 @@
-package com.example.frontendcommunityapp.Model;
+package com.example.frontendcommunityapp.Model.Users;
 
 abstract public class User {
 

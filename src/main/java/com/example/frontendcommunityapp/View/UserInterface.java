@@ -1,8 +1,7 @@
 package com.example.frontendcommunityapp.View;
 
 import com.example.frontendcommunityapp.Controller.Login;
-import com.example.frontendcommunityapp.Model.Resident;
-import com.mysql.cj.protocol.x.XMessage;
+import com.example.frontendcommunityapp.Model.Users.Resident;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Pos;
@@ -11,14 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
-import javax.swing.JLabel;
-import javax.swing.SwingUtilities;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
 
 
 public class UserInterface {

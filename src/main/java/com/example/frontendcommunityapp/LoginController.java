@@ -1,7 +1,7 @@
 package com.example.frontendcommunityapp;
 
 import com.example.frontendcommunityapp.Controller.Login;
-import com.example.frontendcommunityapp.Model.Resident;
+import com.example.frontendcommunityapp.Model.Users.Resident;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;

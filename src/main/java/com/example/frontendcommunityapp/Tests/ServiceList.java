@@ -1,7 +1,9 @@
-package com.example.frontendcommunityapp.Model;
+package com.example.frontendcommunityapp.Tests;
 
+import com.example.frontendcommunityapp.Model.Services.Pago;
+import com.example.frontendcommunityapp.Model.Services.Reservas;
+import com.example.frontendcommunityapp.Model.Services.Services;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableArray;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -11,7 +13,7 @@ import javafx.scene.layout.VBox;
 public class ServiceList {
 
     private TableView<Services> serviceTable;
-/*
+
     private VBox createTable(){
 
         TableColumn id = new TableColumn("id");
@@ -27,8 +29,14 @@ public class ServiceList {
         data.add(new Reservas(4, "Reservas"));
 
         serviceTable = new TableView<>();
+        serviceTable.setItems(data);
+        serviceTable.getColumns().addAll(id, name);
+
+        VBox vBox = new VBox();
+        vBox.getChildren().addAll(serviceTable);
+        return vBox;
 
 
     }
-*/
 }
+
