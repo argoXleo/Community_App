@@ -4,7 +4,7 @@ import com.example.frontendcommunityapp.Controller.DbConnection;
 
 public class Vigilante extends User {
 
-
+    //Agregar Id vigilante
 
     public Vigilante(int id_usuario, String nombre, String telefono,
                      String email, String password, String username) {

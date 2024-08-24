@@ -50,9 +50,11 @@ public class LoginController {
     public void handleLoginButtonAction(javafx.event.ActionEvent actionEvent) throws IOException, SQLException {
         String nombre = userNameField.getText();
         String pass = passwordField.getText();
-        Login login = new Login();
-        Resident loggedInResident = (Resident) login.userLogin(nombre, pass);
+        Login loginResident = new Login();
+        Resident loggedInResident = (Resident) loginResident.userLogin(nombre, pass);
 
+        Login loginAdmin = new Login();
+        Admin loggedInAdmin = (Admin) loginAdmin.userLogin(nombre,pass);
         /*
         String query = "SELECT * FROM usuarios WHERE Resident= '1' ";
 
@@ -71,8 +73,17 @@ public class LoginController {
         }
         */
 
+        String query = "SELECT * FROM usuarios WHERE Resident ='1'";
+        DbConnection connection = new DbConnection();
+        ResultSet rs = connection.getQueryTable(query);
 
-        if (loggedInResident != null  ) {
+        if(rs.next()) {
+            rs.getString("Resident");
+        }
+
+        System.out.println(rs.getString(10));
+
+        if (loggedInResident != null && rs.getBoolean(10) == true){
             mylabel.setText("Welcome: " + loggedInResident.getNombre());
             try {
                 root  = FXMLLoader.load(getClass().getResource("Services.fxml"));
@@ -84,7 +95,7 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
 
-        } //else if (loggedInAdmin) {}
+        }//else if (loggedInAdmin) {}
 
         else {
             mylabel.setText("Login Failed, provide correct credentials");
