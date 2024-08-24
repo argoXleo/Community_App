@@ -41,7 +41,7 @@ public class Login {
                         rs.getString(8));
             }
 
-            //else {return new Vigilante()}
+            //else return new Vigilante()}
 
         }catch (Exception e){
             e.printStackTrace();

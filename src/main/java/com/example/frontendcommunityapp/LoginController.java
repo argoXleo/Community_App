@@ -50,11 +50,9 @@ public class LoginController {
     public void handleLoginButtonAction(javafx.event.ActionEvent actionEvent) throws IOException, SQLException {
         String nombre = userNameField.getText();
         String pass = passwordField.getText();
-        Login loginResident = new Login();
-        Resident loggedInResident = (Resident) loginResident.userLogin(nombre, pass);
 
-        Login loginAdmin = new Login();
-        // Admin loggedInAdmin = (Admin) loginAdmin.userLogin(nombre,pass);
+
+
 
 
         /*
@@ -75,17 +73,60 @@ public class LoginController {
         }
         */
 
-        String query = "SELECT * FROM usuarios WHERE Resident ='1'";
+
+        //Login login = new Login();
+        String query = "SELECT * FROM usuarios WHERE username = '" + nombre + "' AND password = '" + pass + "'";
         DbConnection connection = new DbConnection();
-        ResultSet rs = connection.getQueryTable(query);
+        try {
 
-        if(rs.next()) {
-            rs.getString("Resident");
-        }
+            ResultSet rs = connection.getQueryTable(query);
+            rs.next();
+            if (rs.getBoolean(10) == true) {
+                Resident loggedInResident = new Resident(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8));
 
-        System.out.println(rs.getString(10));
+                try {
+                    root = FXMLLoader.load(getClass().getResource("Services.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
 
-        if (loggedInResident != null && rs.getBoolean(10) == true){
+            } else if (rs.getBoolean(9) == true) {
+                Admin loggedInAdmin = new Admin(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6),
+                        rs.getString(7),
+                        rs.getString(8));
+
+
+                try {
+                    root  = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+        /*
+        if (  ){
+
+
+
             mylabel.setText("Welcome: " + loggedInResident.getNombre());
             try {
                 root  = FXMLLoader.load(getClass().getResource("Services.fxml"));
@@ -99,7 +140,9 @@ public class LoginController {
 
         }
 
-        else if (loggedInAdmin != null && rs.getBoolean(9) == true) {
+        else if (rs.getBoolean(9) == true) {
+            Login loginAdmin = new Login();
+            Admin loggedInAdmi                                  n = (Admin) loginAdmin.userLogin(nombre,pass);
             mylabel.setText("Welcome: " + loggedInAdmin.getNombre());
             try {
                 root  = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
@@ -112,28 +155,30 @@ public class LoginController {
             stage.show();
 
         }
+        */
+            else {
+                mylabel.setText("Login Failed, provide correct credentials");
+            }
 
-        else {
-            mylabel.setText("Login Failed, provide correct credentials");
+        } catch (Exception e) {
+            e.printStackTrace();
+
         }
 
     }
+        public void switchRegisterPage(javafx.event.ActionEvent actionEvent) throws IOException {
+            try {
+                root = FXMLLoader.load(getClass().getResource("Register.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
-    private boolean authenticateUser(String username, String password) {
-
-        return true;
-    }
-
-    public void switchRegisterPage(javafx.event.ActionEvent actionEvent) throws IOException {
-        try {
-            root  = FXMLLoader.load(getClass().getResource("Register.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
         }
-        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
 
-    }
+
 }
+
