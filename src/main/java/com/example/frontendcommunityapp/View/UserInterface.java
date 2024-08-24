@@ -1,3 +1,4 @@
+
 package com.example.frontendcommunityapp.View;
 
 import com.example.frontendcommunityapp.Controller.Login;
@@ -14,6 +15,7 @@ import javafx.fxml.FXML;
 
 
 public class UserInterface {
+    /*
     @FXML
     private Label messageLabel;
 
@@ -57,7 +59,7 @@ public class UserInterface {
 
         //Button loginButton = new Button("Ingresar");
         //loginPage.add(loginButton, 1, 2);
-
+/*
         loginButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
@@ -90,4 +92,7 @@ public class UserInterface {
         Button helloButton = new Button("Hola!");
         helloPage.add(helloButton, 0, 1);
     }
+
+     */
 }
+

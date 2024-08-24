@@ -54,7 +54,9 @@ public class LoginController {
         Resident loggedInResident = (Resident) loginResident.userLogin(nombre, pass);
 
         Login loginAdmin = new Login();
-        Admin loggedInAdmin = (Admin) loginAdmin.userLogin(nombre,pass);
+        // Admin loggedInAdmin = (Admin) loginAdmin.userLogin(nombre,pass);
+
+
         /*
         String query = "SELECT * FROM usuarios WHERE Resident= '1' ";
 
@@ -95,7 +97,21 @@ public class LoginController {
             stage.setScene(scene);
             stage.show();
 
-        }//else if (loggedInAdmin) {}
+        }
+
+        else if (loggedInAdmin != null && rs.getBoolean(9) == true) {
+            mylabel.setText("Welcome: " + loggedInAdmin.getNombre());
+            try {
+                root  = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+        }
 
         else {
             mylabel.setText("Login Failed, provide correct credentials");
