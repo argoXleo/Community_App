@@ -1,5 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <?import java.lang.*?>
 <?import javafx.scene.chart.*?>
 <?import javafx.scene.control.*?>
@@ -10,174 +8,160 @@
            minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0"
            xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
            fx:controller="com.example.frontendcommunityapp.DashboardController">
-   <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
-         <children>
-            <BorderPane layoutX="330.0" layoutY="159.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <left>
-                  <AnchorPane prefHeight="600.0" prefWidth="222.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <AnchorPane id="myAnchorPane" prefHeight="600.0" prefWidth="222.0" styleClass="nav-form" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                           <children>
-                              <AnchorPane layoutX="11.0" layoutY="29.0" prefHeight="87.0" prefWidth="200.0" styleClass="header" stylesheets="@Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <Label layoutX="59.0" layoutY="33.0" text="CommunityApp" textFill="#e6d8d8">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </AnchorPane>
-                              <Label layoutX="14.0" layoutY="87.0" text="Welcome," textFill="#f3f1f1">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="88.0" layoutY="87.0" prefHeight="17.0" prefWidth="120.0" text="User" textFill="#cfe1e8">
-                                 <font>
-                                    <Font size="15.0" />
-                                 </font>
-                              </Label>
-                              <Button layoutX="6.0" layoutY="154.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Dashboard" />
-                              <Button id="ServiceButton" onAction="#switchToServicesPage" layoutX="6.0" layoutY="218.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Servicios" />
-                              <Button id="RegisterButton" onAction="#abrirRegistroMascotas" layoutX="6.0" layoutY="278.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registro Mascotas" />
-                              <Button layoutX="6.0" layoutY="345.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Admins" />
-                              <Button layoutX="7.0" layoutY="406.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagos" />
-                              <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" stylesheets="@Style.css" text="Salir">
-                                 <styleClass>
-                                    <String fx:value="logout" />
-                                    <String fx:value="shadow" />
-                                 </styleClass>
-                              </Button>
-                           </children>
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <BorderPane layoutX="330.0" layoutY="159.0" prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="600.0" prefWidth="222.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane id="myAnchorPane" prefHeight="600.0" prefWidth="222.0" styleClass="nav-form" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <children>
+                                        <AnchorPane layoutX="11.0" layoutY="29.0" prefHeight="87.0" prefWidth="200.0" styleClass="header" stylesheets="@Style.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label layoutX="59.0" layoutY="33.0" text="CommunityApp" textFill="#e6d8d8">
+                                                    <font>
+                                                        <Font size="15.0" />
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </AnchorPane>
+                                        <Label layoutX="14.0" layoutY="87.0" text="Welcome," textFill="#f3f1f1">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="88.0" layoutY="87.0" prefHeight="17.0" prefWidth="120.0" text="User" textFill="#cfe1e8">
+                                            <font>
+                                                <Font size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Button layoutX="6.0" layoutY="154.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Dashboard" />
+                                        <Button id="ServiceButton" onAction="#switchToServicesPage" layoutX="6.0" layoutY="218.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Servicios" />
+                                        <Button layoutX="6.0" layoutY="345.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@Style.css" text="Admins" />
+                                        <Button layoutX="14.0" layoutY="561.0" mnemonicParsing="false" stylesheets="@Style.css" text="Salir">
+                                            <styleClass>
+                                                <String fx:value="logout" />
+                                                <String fx:value="shadow" />
+                                            </styleClass>
+                                        </Button>
+                                    </children>
+                                </AnchorPane>
+                            </children>
                         </AnchorPane>
-                     </children>
-                  </AnchorPane>
-               </left>
-               <center>
-                  <AnchorPane prefHeight="622.0" prefWidth="916.0" BorderPane.alignment="CENTER">
-                     <children>
-                        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="174.0" prefWidth="854.0" stylesheets="@Style.css">
-                           <styleClass>
-                              <String fx:value="white-bg" />
-                              <String fx:value="radius" />
-                              <String fx:value="shadow" />
-                           </styleClass>
-                           <children>
-                              <ScrollPane layoutX="327.0" layoutY="-6.0" prefHeight="194.0" prefWidth="854.0" styleClass="transparent" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <content>
-                                    <AnchorPane prefHeight="160.0" prefWidth="1095.0">
-                                       <children>
-                                          <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
-                                             <children>
-                                                <Label layoutX="12.0" layoutY="58.0" text="Número de residentes" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label layoutX="95.0" layoutY="21.0" text="0" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </AnchorPane>
-                                          <AnchorPane layoutX="233.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
-                                             <children>
-                                                <Label layoutX="48.0" layoutY="58.0" text="Saldo en caja" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label layoutX="81.0" layoutY="21.0" text="\$ 0.0" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </AnchorPane>
-                                          <AnchorPane layoutX="448.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
-                                             <children>
-                                                <Label layoutX="32.0" layoutY="58.0" text="Gastos pendientes" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label layoutX="86.0" layoutY="21.0" text="\$ 0.0" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </AnchorPane>
-                                          <AnchorPane layoutX="660.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
-                                             <children>
-                                                <Label layoutX="12.0" layoutY="58.0" text="Número de residentes" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                                <Label layoutX="95.0" layoutY="21.0" text="0" textFill="#f8f8f8">
-                                                   <font>
-                                                      <Font size="18.0" />
-                                                   </font>
-                                                </Label>
-                                             </children>
-                                          </AnchorPane>
-                                       </children>
-                                    </AnchorPane>
-                                 </content>
-                              </ScrollPane>
-                           </children>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="622.0" prefWidth="916.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="174.0" prefWidth="854.0" stylesheets="@Style.css">
+                                    <styleClass>
+                                        <String fx:value="white-bg" />
+                                        <String fx:value="radius" />
+                                        <String fx:value="shadow" />
+                                    </styleClass>
+                                    <children>
+                                        <ScrollPane layoutX="327.0" layoutY="-6.0" prefHeight="194.0" prefWidth="854.0" styleClass="transparent" stylesheets="@Style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <AnchorPane prefHeight="160.0" prefWidth="1095.0">
+                                                    <children>
+                                                        <AnchorPane layoutX="14.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
+                                                            <children>
+                                                                <Label layoutX="12.0" layoutY="58.0" text="Número de residentes" textFill="#f8f8f8">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="95.0" layoutY="21.0" text="0" textFill="#f8f8f8">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="233.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
+                                                            <children>
+                                                                <Label layoutX="48.0" layoutY="58.0" text="Saldo en caja" textFill="#f8f8f8">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="81.0" layoutY="21.0" text="\$ 0.0" textFill="#f8f8f8">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="448.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css">
+                                                            <children>
+                                                                <Label layoutX="32.0" layoutY="58.0" text="Gastos pendientes" textFill="#f8f8f8">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="86.0" layoutY="21.0" text="\$ 0.0" textFill="#f8f8f8">
+                                                                    <font>
+                                                                        <Font size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <!-- Faltaba el cierre de esta sección -->
+                                                        <AnchorPane layoutX="660.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css" />
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane layoutX="16.0" layoutY="229.0" prefHeight="357.0" prefWidth="854.0" stylesheets="@Style.css">
+                                    <styleClass>
+                                        <String fx:value="white-bg" />
+                                        <String fx:value="radius" />
+                                        <String fx:value="shadow" />
+                                    </styleClass>
+                                    <children>
+                                        <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="335.0" prefWidth="411.0" stylesheets="@Style.css">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <AreaChart layoutX="4.0" layoutY="2.0" prefHeight="325.0" prefWidth="402.0" title="Saldo">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </AreaChart>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane layoutX="429.0" layoutY="11.0" prefHeight="335.0" prefWidth="411.0" stylesheets="@Style.css">
+                                            <styleClass>
+                                                <String fx:value="white-bg" />
+                                                <String fx:value="shadow" />
+                                                <String fx:value="radius" />
+                                            </styleClass>
+                                            <children>
+                                                <BarChart layoutX="10.0" layoutY="7.0" prefHeight="318.0" prefWidth="395.0" title="Residentes">
+                                                    <xAxis>
+                                                        <CategoryAxis side="BOTTOM" />
+                                                    </xAxis>
+                                                    <yAxis>
+                                                        <NumberAxis side="LEFT" />
+                                                    </yAxis>
+                                                </BarChart>
+                                            </children>
+                                        </AnchorPane>
+                                    </children>
+                                </AnchorPane>
+                            </children>
                         </AnchorPane>
-                        <AnchorPane layoutX="16.0" layoutY="229.0" prefHeight="357.0" prefWidth="854.0" stylesheets="@Style.css">
-                           <styleClass>
-                              <String fx:value="white-bg" />
-                              <String fx:value="radius" />
-                              <String fx:value="shadow" />
-                           </styleClass>
-                           <children>
-                              <AnchorPane layoutX="14.0" layoutY="11.0" prefHeight="335.0" prefWidth="411.0" stylesheets="@Style.css">
-                                 <styleClass>
-                                    <String fx:value="white-bg" />
-                                    <String fx:value="shadow" />
-                                    <String fx:value="radius" />
-                                 </styleClass>
-                                 <children>
-                                    <AreaChart layoutX="4.0" layoutY="2.0" prefHeight="325.0" prefWidth="402.0" title="Saldo">
-                                       <xAxis>
-                                          <CategoryAxis side="BOTTOM" />
-                                       </xAxis>
-                                       <yAxis>
-                                          <NumberAxis side="LEFT" />
-                                       </yAxis>
-                                    </AreaChart>
-                                 </children>
-                              </AnchorPane>
-                              <AnchorPane layoutX="429.0" layoutY="11.0" prefHeight="335.0" prefWidth="411.0" stylesheets="@Style.css">
-                                 <styleClass>
-                                    <String fx:value="white-bg" />
-                                    <String fx:value="shadow" />
-                                    <String fx:value="radius" />
-                                 </styleClass>
-                                 <children>
-                                    <BarChart layoutX="10.0" layoutY="7.0" prefHeight="318.0" prefWidth="395.0" title="Residentes">
-                                       <xAxis>
-                                          <CategoryAxis side="BOTTOM" />
-                                       </xAxis>
-                                       <yAxis>
-                                          <NumberAxis side="LEFT" />
-                                       </yAxis>
-                                    </BarChart>
-                                 </children>
-                              </AnchorPane>
-                           </children>
-                        </AnchorPane>
-                     </children>
-                  </AnchorPane>
-               </center>
-            </BorderPane>
-         </children>
-      </AnchorPane>
-   </children>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
 </StackPane>

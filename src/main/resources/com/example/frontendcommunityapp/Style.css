@@ -1,45 +1,140 @@
+/* Colores */
+.primary-color {
+    -fx-background-color: #87BEEB; /* Azul */
+}
+
+.secondary-color {
+    -fx-background-color: #848e96; /* Gris */
+}
+
+.text-color {
+    -fx-text-fill: #000; /* Negro */
+}
+
+
+/* Estilos para los paneles de información */
+.residentes-panel {
+    -fx-background-color: #87BEEB; /* Azul */
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-min-width: 150px;
+    -fx-min-height: 100px;
+    -fx-alignment: center; /* Centrar contenido */
+}
+
+.saldo-panel {
+    -fx-background-color: #848e96; /* Gris */
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-min-width: 150px;
+    -fx-min-height: 100px;
+    -fx-alignment: center; /* Centrar contenido */
+}
+
+.gastos-panel {
+    -fx-background-color: #87BEEB; /* Azul */
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-min-width: 150px;
+    -fx-min-height: 100px;
+    -fx-alignment: center; /* Centrar contenido */
+}
+
+/* Estilos para los números en los paneles de información */
+.residentes-number {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000; /* Negro */
+}
+
+.saldo-number {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000; /* Negro */
+}
+
+.gastos-number {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000; /* Negro */
+}
+/* Estilos generales */
+.root {
+    -fx-background-color: #87BEEB; /* Fondo azul para el contenedor principal */
+    -fx-font-size: 14px; /* Tamaño de fuente predeterminado */
+}
+
 .header {
--fx-background-color: linear-gradient(to bottom right, #098c53, #246861);
-
+    -fx-background-color: #87BEEB; /* Azul */
+    -fx-padding: 10px;
+    -fx-text-fill: #000; /* Negro */
+    -fx-font-size: 18px; /* Tamaño de fuente para el título */
 }
 
-.nav-form {
-    -fx-background-color: linear-gradient(to bottom right, #0f6789, #22861a);
+.dashboard {
+    -fx-background-color: #87BEEB; /* Fondo azul para el dashboard */
+    -fx-padding: 20px;
 }
 
-.nav-btn {
-    -fx-background-color: transparent;
-    -fx-border-color: #fff;
-    -fx-border-width: .4px;
+.pagos {
+    -fx-background-color: #87BEEB; /* Fondo azul para la sección de pagos */
+    -fx-padding: 20px;
+}
+
+.servicios {
+    -fx-background-color: #848e96; /* Fondo gris para la vista de servicios */
+    -fx-padding: 20px;
+}
+
+/* Campos de texto */
+.mascotas-form {
+    -fx-background-color: #fff; /* Fondo blanco */
+    -fx-padding: 15px;
+    -fx-border-color: #848e96; /* Borde gris */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px; /* Redondear esquinas */
+}
+
+/* Botones en azul */
+.button {
+    -fx-background-color: #87BEEB; /* Azul */
+    -fx-text-fill: #000; /* Negro */
     -fx-cursor: hand;
-    -fx-text-fill: #fff;
-    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px; /* Redondear esquinas */
 }
 
-.nav-btn:hover{
-    -fx-background-color: #fff;
-    -fx-text-fill: #000;
+.button:hover {
+    -fx-background-color: #fff; /* Cambia a blanco al pasar el mouse */
+    -fx-text-fill: #000; /* Negro */
 }
 
 .logout {
-    -fx-background-color: #106abf;
+    -fx-background-color: #87BEEB; /* Azul */
     -fx-padding: 5px;
     -fx-cursor: hand;
     -fx-background-radius: 50px;
+    -fx-text-fill: #000; /* Negro */
 }
 
-.shadow{
-    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
+/* Panel de información con fondo gris */
+.info-panel {
+    -fx-background-color: #848e96; /* Gris */
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-min-width: 150px;
+    -fx-min-height: 100px;
+    -fx-alignment: center; /* Centrar contenido */
 }
 
-.white-bg{
-    -fx-background-color: #fff;
+/* Estilo para los números en el panel de información */
+.info-number {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000; /* Negro */
 }
 
-.radius{
-    -fx-background-radius: 8px;
-}
-
-.transparent{
-  -fx-background-color: transparent;
+/* Texto en negro */
+.label, .text {
+    -fx-text-fill: #000; /* Negro */
 }

@@ -6,12 +6,14 @@
 
 <VBox alignment="CENTER" spacing="20.0" prefWidth="600" prefHeight="400"
       xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.frontendcommunityapp.MascotasController">
+      fx:controller="com.example.frontendcommunityapp.MascotasController"
+      stylesheets="@Style.css">
 
-    <Label text="Mascotas" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-    <TextField fx:id="textFieldNombreMascota" promptText="Nombre de la mascota"/>
-    <TextField fx:id="textFieldRaza" promptText="Raza de la mascota"/>
-    <TextField fx:id="textFieldIdCasaApto" promptText="ID del residente"/>
-    <CheckBox fx:id="checkBoxPerdido" text="Reportar como perdido"/>
-    <Button fx:id="buttonRegistrar" onAction="#registrarMascota" text="Registrar Mascota"/>
+    <Label text="Mascotas" styleClass="text-color" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <TextField fx:id="textFieldNombreMascota" promptText="Nombre de la mascota" styleClass="mascotas-form" />
+    <TextField fx:id="textFieldRaza" promptText="Raza de la mascota" styleClass="mascotas-form" />
+    <TextField fx:id="textFieldIdCasaApto" promptText="Casa o Apartamento No°" styleClass="mascotas-form" />
+    <CheckBox fx:id="checkBoxPerdido" text="Reportar como perdido" styleClass="mascotas-form" />
+    <Button fx:id="buttonRegistrar" onAction="#registrarMascota" text="Registrar Mascota" styleClass="nav-btn" />
+    <Button fx:id="buttonAtrasPagarResident" layoutX="494.0" layoutY="23.0" mnemonicParsing="false" onAction="#volverAServicios" prefHeight="35.0" prefWidth="62.0" styleClass="nav-btn" stylesheets="@Style.css" text="Atras" />
 </VBox>

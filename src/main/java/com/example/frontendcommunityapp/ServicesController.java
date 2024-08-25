@@ -15,9 +15,9 @@ public class ServicesController {
     private Scene scene;
     private Parent root;
 
-    public void switchToPagosPage(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void switchToPagosPage(ActionEvent actionEvent) throws IOException {
         try {
-            root  = FXMLLoader.load(getClass().getResource("Pagos.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Pagos.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -25,7 +25,6 @@ public class ServicesController {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-
     }
 
     public void abrirRegistroMascotas(ActionEvent actionEvent) throws IOException {
@@ -42,4 +41,12 @@ public class ServicesController {
         }
     }
 
+    public void volverAServicios(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Services.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
+    }
 }

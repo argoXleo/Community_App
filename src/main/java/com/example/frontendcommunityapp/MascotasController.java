@@ -1,8 +1,15 @@
 package com.example.frontendcommunityapp;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -19,6 +26,17 @@ public class MascotasController {
     private TextField textFieldIdCasaApto;
     @FXML
     private CheckBox checkBoxPerdido;
+
+    private Stage stage;
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    @FXML
+    public void initialize() {
+
+    }
 
     @FXML
     public void registrarMascota() {
@@ -46,4 +64,13 @@ public class MascotasController {
         }
     }
 
+    @FXML
+    public void volverAServicios(ActionEvent event) throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Services.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

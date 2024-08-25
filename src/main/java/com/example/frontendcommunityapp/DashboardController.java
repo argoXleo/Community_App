@@ -19,7 +19,8 @@ public class DashboardController {
     @FXML
     private Button serviceButton;
 
-    public void switchToServicesPage(javafx.event.ActionEvent actionEvent) throws IOException {
+    @FXML
+    private void switchToServicesPage(javafx.event.ActionEvent actionEvent) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Services.fxml"));
         stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -40,5 +41,17 @@ public class DashboardController {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    private void handleDashboard(javafx.event.ActionEvent actionEvent) {
+        System.out.println("Botón de Dashboard presionado");
+    }
+
+    @FXML
+    private void handleExit(javafx.event.ActionEvent actionEvent) {
+        System.out.println("Botón de Salir presionado");
+        // Cerrar la aplicación
+        System.exit(0);
     }
 }
