@@ -36,6 +36,9 @@ public class PagosAdminController {
     private Button buttonAtrasPagar;
 
     @FXML
+    private TextField tFEstadoPagoAdmin;
+
+    @FXML
     public void registerPaymentInfo(javafx.event.ActionEvent actionEvent) throws IOException {
 
         String cantidad = textFieldCantidad.getText();
@@ -46,7 +49,7 @@ public class PagosAdminController {
         Pago pago1 = new Pago(3, "Pago", cantidad, concepto, username);
         pago1.registrarPagoDB(cantidad,concepto,username);
 
-
+        tFEstadoPagoAdmin.setText("Pago Realizado");
     }
 
     public void atrasPagarServicio(javafx.event.ActionEvent actionEvent) throws IOException {

@@ -15,9 +15,10 @@ public class ServicesController {
     private Scene scene;
     private Parent root;
 
+
     public void switchToPagosPage(javafx.event.ActionEvent actionEvent) throws IOException {
         try {
-            root  = FXMLLoader.load(getClass().getResource("Pagos.fxml"));
+            root  = FXMLLoader.load(getClass().getResource("PagosResident.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -1,7 +1,6 @@
 package com.example.frontendcommunityapp;
 
 import com.example.frontendcommunityapp.Model.Services.Pago;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -12,10 +11,9 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 
-import java.awt.*;
 import java.io.IOException;
 
-public class PagosController {
+public class PagosResidentController {
 
     private Stage stage;
     private Scene scene;
@@ -29,6 +27,9 @@ public class PagosController {
 
     @FXML
     private TextField textFieldUsername;
+
+    @FXML
+    private TextField textFieldEstadoPago;
 
     @FXML
     private Button buttonPagar;
@@ -47,7 +48,7 @@ public class PagosController {
         Pago pago1 = new Pago(3, "Pago", cantidad, concepto, username);
         pago1.registrarPagoDB(cantidad,concepto,username);
 
-
+        textFieldEstadoPago.setText("Pago Realizado");
     }
 
 
