@@ -48,6 +48,7 @@
                      </font>
                   </Label>
                   <Separator layoutX="-5.0" layoutY="71.0" prefHeight="11.0" prefWidth="592.0" />
+                  <Button fx:id="buttonAtrasPagarResident" layoutX="494.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToServicesResident" prefHeight="35.0" prefWidth="62.0" styleClass="nav-btn" stylesheets="@Style.css" text="Atras" />
                </children></AnchorPane>
             <Button id="buttonPagar" layoutX="435.0" layoutY="164.0" mnemonicParsing="false" onAction="#registerPaymentInfo" prefHeight="60.0" prefWidth="118.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagar" />
             <Label layoutX="104.0" layoutY="315.0" text="Estado">
