@@ -7,15 +7,14 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-
-import java.awt.*;
 import java.io.IOException;
 
-public class PagosController {
+public class PagosAdminController {
+
 
     private Stage stage;
     private Scene scene;
@@ -50,5 +49,17 @@ public class PagosController {
 
     }
 
+    public void atrasPagarServicio(javafx.event.ActionEvent actionEvent) throws IOException {
+
+        try {
+            root = FXMLLoader.load(getClass().getResource("ServicesAdmin.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 
 }

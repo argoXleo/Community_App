@@ -1,36 +1,37 @@
 package com.example.frontendcommunityapp;
-import javafx.fxml.FXML;
+
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
-public class DashboardController {
-
+public class ServicesAdminController {
     private Stage stage;
     private Scene scene;
     private Parent root;
 
 
-    private Button serviceButton;
-
-/*
-    public void switchToServicesPage(ActionEvent event) throws IOException {
-        root  = FXMLLoader.load(getClass().getResource("Services.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+    public void switchToPagosPage(ActionEvent actionEvent) {
+        try {
+            root  = FXMLLoader.load(getClass().getResource("PagosAdmin.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
-*/
-    public void switchToServicesPage(javafx.event.ActionEvent actionEvent) throws IOException {
+
+
+
+    public void switchToAdminDashboard(ActionEvent actionEvent) {
         try {
-            root  = FXMLLoader.load(getClass().getResource("ServicesAdmin.fxml"));
+            root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
