@@ -4,61 +4,61 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.PagosController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #a8afb5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.PagosController">
 
-   <children>
-      <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="388.0" prefWidth="587.0" styleClass="nav-form" stylesheets="@Style.css">
-         <children>
-            <GridPane layoutX="24.0" layoutY="87.0" prefHeight="215.0" prefWidth="377.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label text="Cantidad">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label text="Concepto" GridPane.rowIndex="1">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label text="Username" GridPane.rowIndex="2">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField id="textFieldCantidad" fx:id="textFieldCantidad" promptText="Digite cantidad" GridPane.columnIndex="1" />
-                  <TextField id="textFieldConcepto" fx:id="textFieldConcepto" promptText="Digite Concepto" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField id="textFieldUsername" fx:id="textFieldUsername" promptText="Digite Username" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-               </children>
-            </GridPane>
-            <AnchorPane layoutX="5.0" layoutY="4.0" prefHeight="91.0" prefWidth="578.0" styleClass="nav-form" stylesheets="@Style.css">
-               <children>
-                  <Label layoutX="20.0" layoutY="19.0" text="Pagos">
-                     <font>
-                        <Font size="36.0" />
-                     </font>
-                  </Label>
-                  <Separator layoutX="-5.0" layoutY="71.0" prefHeight="11.0" prefWidth="592.0" />
-                  <Button fx:id="buttonAtrasPagarResident" layoutX="494.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToServicesResident" prefHeight="35.0" prefWidth="62.0" styleClass="nav-btn" stylesheets="@Style.css" text="Atras" />
-               </children>
-            </AnchorPane>
-            <Button id="buttonPagar" layoutX="435.0" layoutY="164.0" mnemonicParsing="false" onAction="#registerPaymentInfo" prefHeight="60.0" prefWidth="118.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagar" />
-            <Label layoutX="104.0" layoutY="315.0" text="Estado">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
-            <TextField layoutX="211.0" layoutY="312.0" prefHeight="41.0" prefWidth="176.0" />
-         </children>
-      </AnchorPane>
-   </children>
+    <children>
+        <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="388.0" prefWidth="587.0" styleClass="nav-form" stylesheets="@Style.css">
+            <children>
+                <GridPane layoutX="24.0" layoutY="87.0" prefHeight="215.0" prefWidth="377.0" hgap="10" vgap="10">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="Cantidad" style="-fx-font-size: 18px; -fx-text-fill: #000;">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Concepto" GridPane.rowIndex="1" style="-fx-font-size: 18px; -fx-text-fill: #000;">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label text="Username" GridPane.rowIndex="2" style="-fx-font-size: 18px; -fx-text-fill: #000;">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField id="textFieldCantidad" fx:id="textFieldCantidad" promptText="Digite cantidad" GridPane.columnIndex="1" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+                        <TextField id="textFieldConcepto" fx:id="textFieldConcepto" promptText="Digite Concepto" GridPane.columnIndex="1" GridPane.rowIndex="1" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+                        <TextField id="textFieldUsername" fx:id="textFieldUsername" promptText="Digite Username" GridPane.columnIndex="1" GridPane.rowIndex="2" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+                    </children>
+                </GridPane>
+                <AnchorPane layoutX="5.0" layoutY="4.0" prefHeight="91.0" prefWidth="578.0" styleClass="nav-form" stylesheets="@Style.css">
+                    <children>
+                        <Label layoutX="20.0" layoutY="19.0" text="Pagos" style="-fx-font-size: 36px; -fx-text-fill: #000;">
+                            <font>
+                                <Font size="36.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutX="-5.0" layoutY="71.0" prefHeight="11.0" prefWidth="592.0" />
+                        <Button fx:id="buttonAtrasPagarResident" layoutX="494.0" layoutY="23.0" mnemonicParsing="false" onAction="#backToServicesResident" prefHeight="35.0" prefWidth="62.0" styleClass="nav-btn" stylesheets="@Style.css" text="Atras" />
+                    </children>
+                </AnchorPane>
+                <Button id="buttonPagar" layoutX="435.0" layoutY="164.0" mnemonicParsing="false" onAction="#registerPaymentInfo" prefHeight="40.0" prefWidth="100.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagar" />
+                <Label layoutX="104.0" layoutY="320.0" text="Estado" style="-fx-font-size: 24px; -fx-text-fill: #000;">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <TextField layoutX="211.0" layoutY="317.0" prefHeight="41.0" prefWidth="176.0" style="-fx-background-color: #fff; -fx-border-color: #ccc; -fx-border-radius: 5px;"/>
+            </children>
+        </AnchorPane>
+    </children>
 </AnchorPane>

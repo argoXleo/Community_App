@@ -51,7 +51,20 @@ public class DashboardController {
     @FXML
     private void handleExit(javafx.event.ActionEvent actionEvent) {
         System.out.println("Botón de Salir presionado");
-        // Cerrar la aplicación
         System.exit(0);
+    }
+
+    @FXML
+    private void abrirQuejas(javafx.event.ActionEvent actionEvent) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Quejas.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Quejas y Reclamos");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

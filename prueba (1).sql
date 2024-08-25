@@ -84,15 +84,17 @@ CREATE TABLE `perfiles` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `quejas y peticiones`
+-- Estructura de tabla para la tabla `peticiones y quejas`
 --
 
-CREATE TABLE `quejas y peticiones` (
-  `id_usuario` int(12) NOT NULL,
-  `id_queja` int(12) NOT NULL,
-  `peticion` text NOT NULL,
-  `fecha` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+CREATE TABLE peticiones_y_quejas (
+    ID INT(11) AUTO_INCREMENT PRIMARY KEY,
+    IDUsuario INT(20) NOT NULL,
+    Fecha DATE NOT NULL,
+    Asunto TEXT NOT NULL,
+    Descripcion TEXT NOT NULL
+);
+
 
 -- --------------------------------------------------------
 

@@ -1,48 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #87BEEB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.LoginController">
+<AnchorPane prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #87BEEB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.QuejasController">
+    <children>
+        <Label layoutX="0.0" layoutY="10.0" text="Peticiones o Quejas" styleClass="titulo" prefWidth="400.0" alignment="CENTER" textAlignment="CENTER" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: black; -fx-font-family: 'Arial'; -fx-padding: 10px; -fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-radius: 5px; -fx-background-radius: 5px;" />
 
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
-   <AnchorPane prefHeight="50.0" prefWidth="50.0">
-      <children>
-         <Button fx:id="registroButton" onAction="#switchRegisterPage" mnemonicParsing="false" text="Registro de Usuario" />
-      </children>
-   </AnchorPane>
+        <Label layoutX="20.0" layoutY="60.0" text="ID Usuario:" styleClass="label" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        <TextField fx:id="idUsuarioField" layoutX="150.0" layoutY="60.0" styleClass="mascotas-form" />
 
-    <!-- Agregamos la imagen del logo -->
-    <ImageView fx:id="logoImageView" fitHeight="150" fitWidth="200">
-        <Image url="@images/logo.jpg" />
-    </ImageView>
+        <Label layoutX="20.0" layoutY="100.0" text="Fecha:" styleClass="label" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        <TextField fx:id="fechaField" layoutX="150.0" layoutY="100.0" promptText="YYYY-MM-DD" styleClass="mascotas-form" />
 
-    <Label style="-fx-font-size: 24; -fx-font-weight: bold;" text="Bienvenido a Community App" /> <!-- Mensaje de bienvenida -->
+        <Label layoutX="20.0" layoutY="140.0" text="Asunto:" styleClass="label" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        <TextField fx:id="asuntoField" layoutX="150.0" layoutY="140.0" styleClass="mascotas-form" />
 
-    <GridPane fx:id="loginPage" alignment="CENTER" hgap="10" vgap="10">
-        <Label text="Usuario:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-        <TextField fx:id="userNameField" promptText="Escriba su nombre de usuario aquí" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <Label layoutX="20.0" layoutY="180.0" text="Descripción:" styleClass="label" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+        <TextArea fx:id="descripciónField" layoutX="150.0" layoutY="180.0" prefHeight="100.0" styleClass="mascotas-form" />
 
-        <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <PasswordField fx:id="passwordField" promptText="Escriba su contraseña" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-        <Label fx:id="mylabel" text="Hi!" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-
-        <Button fx:id="loginButton" onAction="#handleLoginButtonAction" text="Ingresar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-        
-      <columnConstraints>
-         <ColumnConstraints />
-         <ColumnConstraints />
-      </columnConstraints>
-      <rowConstraints>
-         <RowConstraints />
-         <RowConstraints />
-         <RowConstraints />
-      </rowConstraints>
-    </GridPane>
-</VBox>
+        <Button layoutX="150.0" layoutY="300.0" text="Enviar Queja" onAction="#registrarQueja" style="-fx-text-fill: black; -fx-background-color: #d3d3d3; -fx-font-weight: bold;" />
+        <Button layoutX="20.0" layoutY="300.0" text="Atrás" onAction="#volverAServicios" style="-fx-text-fill: black; -fx-background-color: #d3d3d3; -fx-font-weight: bold;" />
+    </children>
+</AnchorPane>

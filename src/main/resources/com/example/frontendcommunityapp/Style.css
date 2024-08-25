@@ -11,7 +11,6 @@
     -fx-text-fill: #000; /* Negro */
 }
 
-
 /* Estilos para los paneles de información */
 .residentes-panel {
     -fx-background-color: #87BEEB; /* Azul */
@@ -58,6 +57,7 @@
     -fx-font-weight: bold;
     -fx-text-fill: #000; /* Negro */
 }
+
 /* Estilos generales */
 .root {
     -fx-background-color: #87BEEB; /* Fondo azul para el contenedor principal */
@@ -136,5 +136,47 @@
 
 /* Texto en negro */
 .label, .text {
+    -fx-text-fill: #000; /* Negro */
+}
+
+/* Colores */
+.primary-color {
+    -fx-background-color: #87BEEB; /* Azul */
+}
+
+.secondary-color {
+    -fx-background-color: #848e96; /* Gris */
+}
+
+.text-color {
+    -fx-text-fill: #000; /* Negro */
+}
+
+/* Estilos generales */
+.root {
+    -fx-background-color: #87BEEB; /* Fondo azul para el contenedor principal */
+    -fx-font-size: 14px; /* Tamaño de fuente predeterminado */
+}
+
+/* Campos de texto */
+.mascotas-form {
+    -fx-background-color: #fff; /* Fondo blanco */
+    -fx-padding: 15px;
+    -fx-border-color: #848e96; /* Borde gris */
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px; /* Redondear esquinas */
+}
+
+/* Botones en azul */
+.button {
+    -fx-background-color: #87BEEB; /* Azul */
+    -fx-text-fill: #000; /* Negro */
+    -fx-cursor: hand;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px; /* Redondear esquinas */
+}
+
+.button:hover {
+    -fx-background-color: #fff; /* Cambia a blanco al pasar el mouse */
     -fx-text-fill: #000; /* Negro */
 }

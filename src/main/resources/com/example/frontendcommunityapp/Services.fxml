@@ -43,7 +43,7 @@
                                         <Image url="@images/QuejasReclamos.png" />
                                     </image>
                                 </ImageView>
-                                <Button layoutX="33.0" layoutY="165.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" styleClass="nav-btn" text="Quejas Y Reclamos" />
+                                <Button layoutX="33.0" layoutY="165.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" styleClass="nav-btn" text="Peticiones o Quejas" onAction="#abrirQuejas" />
                             </children>
                         </AnchorPane>
                         <AnchorPane layoutX="14.0" layoutY="254.0" prefHeight="213.0" prefWidth="210.0">

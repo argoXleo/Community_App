@@ -4,18 +4,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="500.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.RegisterController">
+<AnchorPane prefHeight="500.0" prefWidth="520.0" style="-fx-background-color: #a8afb5;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.RegisterController">
    <children>
-      <AnchorPane prefHeight="82.0" prefWidth="520.0" style="-fx-background-color: #246861;">
+      <AnchorPane prefHeight="80.0" prefWidth="520.0" style="-fx-background-color: #87BEEB;">
          <children>
-            <ImageView fitHeight="42.0" fitWidth="69.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="80.0" layoutX="20.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@images/logo.jpg" />
                </image>
             </ImageView>
-            <Label layoutX="99.0" layoutY="28.0" text="Registro de usuario">
+            <Label layoutX="130.0" layoutY="25.0" text="Registro de usuario" style="-fx-font-weight: bold;">
                <font>
-                  <Font size="18.0" />
+                  <Font size="22.0" />
                </font>
             </Label>
          </children>
