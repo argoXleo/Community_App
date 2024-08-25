@@ -66,11 +66,20 @@ public class MascotasController {
 
     @FXML
     public void volverAServicios(ActionEvent event) throws IOException {
+        // Obtén el Stage de la ventana actual
+        Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
+        // Cierra la ventana actual
+        stageActual.close();
+
+        // Carga la escena de "Services.fxml"
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Services.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+
+        // Crea un nuevo Stage y muestra la escena
+        Stage nuevoStage = new Stage();
+        nuevoStage.setScene(scene);
+        nuevoStage.show();
     }
 }

@@ -106,7 +106,6 @@
                                                                 </Label>
                                                             </children>
                                                         </AnchorPane>
-                                                        <!-- Faltaba el cierre de esta sección -->
                                                         <AnchorPane layoutX="660.0" layoutY="23.0" prefHeight="115.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@Style.css" />
                                                     </children>
                                                 </AnchorPane>
