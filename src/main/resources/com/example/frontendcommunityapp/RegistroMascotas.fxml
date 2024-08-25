@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" spacing="20.0" prefWidth="600" prefHeight="400"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.frontendcommunityapp.MascotasController">
+
+    <Label text="Mascotas" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+    <TextField fx:id="textFieldNombreMascota" promptText="Nombre de la mascota"/>
+    <TextField fx:id="textFieldRaza" promptText="Raza de la mascota"/>
+    <TextField fx:id="textFieldIdCasaApto" promptText="ID del residente"/>
+    <CheckBox fx:id="checkBoxPerdido" text="Reportar como perdido"/>
+    <Button fx:id="buttonRegistrar" onAction="#registrarMascota" text="Registrar Mascota"/>
+</VBox>
