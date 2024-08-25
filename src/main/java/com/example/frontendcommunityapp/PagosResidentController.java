@@ -54,7 +54,7 @@ public class PagosResidentController {
 
     public void backToServicesResident(javafx.event.ActionEvent actionEvent) throws IOException {
         try {
-            root = FXMLLoader.load(getClass().getResource("Services.fxml"));
+            root = FXMLLoader.load(getClass().getResource("ServicesResident.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

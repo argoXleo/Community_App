@@ -1,6 +1,5 @@
 package com.example.frontendcommunityapp;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -9,7 +8,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class ServicesController {
+public class ServicesResidentController {
 
     private Stage stage;
     private Scene scene;

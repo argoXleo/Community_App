@@ -21,7 +21,7 @@ public class DashboardController {
 
 /*
     public void switchToServicesPage(ActionEvent event) throws IOException {
-        root  = FXMLLoader.load(getClass().getResource("Services.fxml"));
+        root  = FXMLLoader.load(getClass().getResource("ServicesResident.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

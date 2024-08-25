@@ -92,7 +92,7 @@ public class LoginController {
                         rs.getString(8));
 
                 try {
-                    root = FXMLLoader.load(getClass().getResource("Services.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("ServicesResident.fxml"));
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -129,7 +129,7 @@ public class LoginController {
 
             mylabel.setText("Welcome: " + loggedInResident.getNombre());
             try {
-                root  = FXMLLoader.load(getClass().getResource("Services.fxml"));
+                root  = FXMLLoader.load(getClass().getResource("ServicesResident.fxml"));
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }

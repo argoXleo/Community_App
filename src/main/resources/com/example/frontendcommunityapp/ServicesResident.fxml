@@ -10,7 +10,7 @@
             prefHeight="514.0" prefWidth="858.0"
             xmlns="http://javafx.com/javafx/17.0.2-ea"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.frontendcommunityapp.ServicesController">
+            fx:controller="com.example.frontendcommunityapp.ServicesResidentController">
    <children>
       <AnchorPane layoutX="311.0" layoutY="-27.0" prefHeight="541.0" prefWidth="858.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
