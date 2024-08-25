@@ -27,4 +27,19 @@ public class ServicesController {
         stage.show();
 
     }
+
+    public void abrirRegistroMascotas(ActionEvent actionEvent) throws IOException {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("RegistroMascotas.fxml"));
+            Parent root = loader.load();
+
+            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }

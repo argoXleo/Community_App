@@ -6,7 +6,6 @@ import javafx.beans.property.SimpleStringProperty;
 public abstract class Services {
 
     private final SimpleIntegerProperty id;
-
     private final SimpleStringProperty name;
 
     public Services(int id, String name) {
@@ -18,11 +17,8 @@ public abstract class Services {
         return id.get();
     }
 
-
     public String getName() {
         return name.get();
     }
-
 }
-
 
