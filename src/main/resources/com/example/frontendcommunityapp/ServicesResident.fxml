@@ -5,12 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity"
-            minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="514.0" prefWidth="858.0"
-            xmlns="http://javafx.com/javafx/17.0.2-ea"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.frontendcommunityapp.ServicesResidentController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="514.0" prefWidth="858.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.ServicesResidentController">
    <children>
       <AnchorPane layoutX="311.0" layoutY="-27.0" prefHeight="541.0" prefWidth="858.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -26,7 +21,7 @@
                            <image>
                               <Image url="@images/Pets.png" />
                            </image></ImageView>
-                        <Button layoutX="45.0" layoutY="165.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Mascotas" />
+                        <Button fx:id="buttonMascotasResident" layoutX="45.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchMascotasView" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Mascotas" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="603.0" layoutY="14.0" prefHeight="213.0" prefWidth="210.0">
@@ -63,7 +58,7 @@
                               <Image url="@images/Dollar.png" />
                            </image>
                         </ImageView>
-                        <Button onAction="#switchToPagosPage" layoutX="45.0" layoutY="165.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagos" />
+                        <Button layoutX="45.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchToPagosPage" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagos" />
                      </children>
                   </AnchorPane>
                </children>

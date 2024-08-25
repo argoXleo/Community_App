@@ -15,10 +15,8 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import static com.mysql.cj.conf.PropertyKey.logger;
-
-public class RegistroMascotasController {
-    private static final Logger logger = Logger.getLogger(RegistroMascotasController.class.getName());
+public class RegistroMascotasResidentController {
+    private static final Logger logger = Logger.getLogger(RegistroMascotasResidentController.class.getName());
 
     @FXML
     private TextField textFieldNombreMascota;
@@ -31,6 +29,9 @@ public class RegistroMascotasController {
 
     @FXML
     private CheckBox checkBoxPerdido;
+
+    @FXML
+    private TextField messageVerifyRegister;
 
     private Stage stage;
 
@@ -67,6 +68,8 @@ public class RegistroMascotasController {
         } catch (Exception e) {
             logger.log(Level.SEVERE, "Error al registrar mascota", e);
         }
+
+        messageVerifyRegister.setText("Mascota Registrada");
     }
 
     public void volverAServiciosResident(ActionEvent event) throws IOException {
