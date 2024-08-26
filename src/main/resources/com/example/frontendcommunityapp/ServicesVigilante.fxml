@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.ServicesVigilanteController">
+   <children>
+      <AnchorPane prefHeight="100.0" prefWidth="600.0" styleClass="nav-form" stylesheets="@Style.css">
+         <children>
+            <Label layoutX="14.0" layoutY="33.0" prefHeight="35.0" prefWidth="123.0" text="Bienvenido,">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="145.0" layoutY="33.0" prefHeight="35.0" prefWidth="123.0" text="User">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Button layoutX="504.0" layoutY="33.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="65.0" styleClass="nav-btn" stylesheets="@Style.css" text="Salir" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="6.0" layoutY="103.0" prefHeight="289.0" prefWidth="589.0" styleClass="nav-form" stylesheets="@Style.css">
+         <children>
+            <AnchorPane layoutX="66.0" layoutY="14.0" prefHeight="235.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Registro.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="buttonRegistrarVisitante" layoutX="29.0" layoutY="186.0" mnemonicParsing="false" onAction="#switchRegistrarVisitantePage" prefHeight="35.0" prefWidth="142.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registrar Visitante" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="323.0" layoutY="14.0" prefHeight="235.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@images/Reportar Novedad.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="29.0" layoutY="186.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="142.0" styleClass="nav-btn" stylesheets="@Style.css" text="Reportar Novedad" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
