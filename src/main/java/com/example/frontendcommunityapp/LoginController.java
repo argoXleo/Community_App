@@ -122,6 +122,26 @@ public class LoginController {
                 stage.setScene(scene);
                 stage.show();
             }
+
+            else if (rs.getBoolean(11) == true) {
+                Vigilante vigilante = new Vigilante(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getString(6));
+
+
+                try {
+                    root  = FXMLLoader.load(getClass().getResource("ServicesVigilante.fxml"));
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+                stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            } 
         /*
         if (  ){
 

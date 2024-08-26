@@ -32,7 +32,7 @@
                                         <Image url="@images/QuejasReclamos.png" />
                                     </image>
                                 </ImageView>
-                                <Button layoutX="33.0" layoutY="165.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" styleClass="nav-btn" stylesheets="@Style.css" text="Quejas Y Reclamos" />
+                                <Button fx:id="buttonAnuncios" layoutX="33.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchAnunciosPage" prefHeight="48.0" prefWidth="145.0" styleClass="nav-btn" stylesheets="@Style.css" text="Anuncios" />
                             </children></AnchorPane>
                         <AnchorPane layoutX="163.0" layoutY="254.0" prefHeight="213.0" prefWidth="210.0">
                             <children>
@@ -41,7 +41,7 @@
                                         <Image url="@images/Registro.png" />
                                     </image>
                                 </ImageView>
-                                <Button layoutX="45.0" layoutY="151.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registros" />
+                                <Button fx:id="buttonRegisterUser" layoutX="45.0" layoutY="151.0" mnemonicParsing="false" onAction="#switchRegisterPage" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registros" />
                             </children></AnchorPane>
                         <AnchorPane layoutX="462.0" layoutY="246.0" prefHeight="213.0" prefWidth="210.0">
                             <children>

@@ -1,4 +1,5 @@
 package com.example.frontendcommunityapp;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -7,7 +8,6 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.io.IOException;
 
 public class DashboardController {
@@ -31,6 +31,18 @@ public class DashboardController {
     public void switchToServicesPage(javafx.event.ActionEvent actionEvent) throws IOException {
         try {
             root  = FXMLLoader.load(getClass().getResource("ServicesAdmin.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void salirDash(ActionEvent actionEvent) {
+        try {
+            root  = FXMLLoader.load(getClass().getResource("login.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

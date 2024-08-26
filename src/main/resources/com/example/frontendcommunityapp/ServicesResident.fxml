@@ -24,25 +24,16 @@
                         <Button fx:id="buttonMascotasResident" layoutX="45.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchMascotasView" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Mascotas" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="603.0" layoutY="14.0" prefHeight="213.0" prefWidth="210.0">
+                  <AnchorPane layoutX="599.0" layoutY="139.0" prefHeight="213.0" prefWidth="210.0">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@images/QuejasReclamos.png" />
                            </image>
                         </ImageView>
-                        <Button layoutX="33.0" layoutY="165.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="145.0" styleClass="nav-btn" stylesheets="@Style.css" text="Quejas Y Reclamos" />
+                        <Button fx:id="quejasButton" layoutX="33.0" layoutY="165.0" mnemonicParsing="false" onAction="#quejasView" prefHeight="48.0" prefWidth="145.0" styleClass="nav-btn" stylesheets="@Style.css" text="Quejas Y Reclamos" />
                      </children></AnchorPane>
-                  <AnchorPane layoutX="163.0" layoutY="254.0" prefHeight="213.0" prefWidth="210.0">
-                     <children>
-                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@images/Registro.png" />
-                           </image>
-                        </ImageView>
-                        <Button layoutX="45.0" layoutY="151.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registros" />
-                     </children></AnchorPane>
-                  <AnchorPane layoutX="462.0" layoutY="246.0" prefHeight="213.0" prefWidth="210.0">
+                  <AnchorPane layoutX="291.0" layoutY="264.0" prefHeight="213.0" prefWidth="210.0">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="31.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -51,7 +42,7 @@
                         </ImageView>
                         <Button layoutX="45.0" layoutY="162.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Areas Comunes" />
                      </children></AnchorPane>
-                  <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="213.0" prefWidth="210.0">
+                  <AnchorPane layoutX="14.0" layoutY="121.0" prefHeight="213.0" prefWidth="210.0">
                      <children>
                         <ImageView fitHeight="150.0" fitWidth="145.0" layoutX="33.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -61,6 +52,7 @@
                         <Button layoutX="45.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchToPagosPage" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" stylesheets="@Style.css" text="Pagos" />
                      </children>
                   </AnchorPane>
+                  <Button fx:id="salirResidente" layoutX="28.0" layoutY="26.0" mnemonicParsing="false" onAction="#salirResidente" prefHeight="32.0" prefWidth="62.0" styleClass="nav-btn" stylesheets="@Style.css" text="Salir" />
                </children>
             </AnchorPane>
          </children>

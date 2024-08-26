@@ -1,5 +1,6 @@
 package com.example.frontendcommunityapp;
 
+import com.example.frontendcommunityapp.Model.Services.NovedadVigilante;
 import com.example.frontendcommunityapp.Model.Services.Queja;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,7 +15,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class QuejasController {
+public class NovedadesVigilanteController {
+
 
     private Stage stage;
     private Scene scene;
@@ -32,24 +34,23 @@ public class QuejasController {
     @FXML
     private TextArea descripcionField;
 
-    @FXML
-    public void registrarQueja(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void registrarNovedad(ActionEvent actionEvent) {
         String fecha = fechaField.getText();
         String asunto = asuntoField.getText();
         String descripcion = descripcionField.getText();
-        int idUsuario;
+        int idVigilante;
 
         try {
-            idUsuario = Integer.parseInt(idUsuarioField.getText());
+            idVigilante = Integer.parseInt(idUsuarioField.getText());
         } catch (NumberFormatException e) {
-            mostrarAlerta("Error", "ID de usuario debe ser un número.");
+            mostrarAlerta("Error", "ID de vigilante debe ser un número.");
             return;
         }
 
-        Queja queja = new Queja(fecha, asunto, descripcion, idUsuario);
-        queja.registrarQuejaDB();
+        NovedadVigilante novedad = new NovedadVigilante(fecha, asunto, descripcion, idVigilante);
+        novedad.registrarNovedadDB();
 
-        mostrarAlerta("Éxito", "Queja registrada correctamente.");
+        mostrarAlerta("Éxito", "Novedad registrada correctamente.");
         limpiarCampos();
     }
 
@@ -68,9 +69,9 @@ public class QuejasController {
         idUsuarioField.clear();
     }
 
-    public void volverAServiciosResident(ActionEvent actionEvent) {
+    public void volverAServiciosVigilante(ActionEvent actionEvent) {
         try {
-            root = FXMLLoader.load(getClass().getResource("ServicesResident.fxml"));
+            root = FXMLLoader.load(getClass().getResource("ServicesVigilante.fxml"));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

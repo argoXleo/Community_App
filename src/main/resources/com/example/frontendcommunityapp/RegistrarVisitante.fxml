@@ -19,6 +19,7 @@
                         <Font size="18.0" />
                     </font>
                 </Label>
+            <Button fx:id="buttonAtrasServicesVigilante" layoutX="431.0" layoutY="29.0" mnemonicParsing="false" onAction="#AtrasServicesVigilante" text="Atras" />
             </children></AnchorPane>
         <Label layoutX="59.0" layoutY="109.0" text="Nombre">
             <font>

@@ -6,14 +6,24 @@ import com.example.frontendcommunityapp.Model.Users.User;
 import com.example.frontendcommunityapp.Model.Users.Vigilante;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
+
 import java.awt.*;
 import java.io.IOException;
 
 public class RegisterController {
+
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML
     private TextField textFieldNombre;
@@ -120,6 +130,18 @@ public class RegisterController {
 
 
 
+    }
+
+    public void switchAdminServices(ActionEvent actionEvent) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("ServicesAdmin.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 }
 

@@ -40,4 +40,28 @@ public class ServicesResidentController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void quejasView(ActionEvent actionEvent) {
+        try {
+            root  = FXMLLoader.load(getClass().getResource("Quejas.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void salirResidente(ActionEvent actionEvent) {
+        try {
+            root  = FXMLLoader.load(getClass().getResource("login.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

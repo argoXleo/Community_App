@@ -19,6 +19,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
+            <Button fx:id="buttonAtrasAdminServices" layoutX="417.0" layoutY="29.0" mnemonicParsing="false" onAction="#switchAdminServices" text="Atras" />
          </children></AnchorPane>
       <Label layoutX="50.0" layoutY="95.0" text="Nombre">
          <font>
@@ -64,7 +65,7 @@
       <RadioButton fx:id="radioButtonAdmin" layoutX="59.0" layoutY="361.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Admin" />
       <RadioButton fx:id="radioButtonResident" layoutX="217.0" layoutY="361.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Resident" />
       <RadioButton fx:id="radioButtonVigilante" layoutX="358.0" layoutY="361.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Vigilante" />
-      <Button fx:id="buttonRegistrar" onAction="#registrarUsuario" layoutX="222.0" layoutY="409.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="76.0" text="Registrar" />
+      <Button fx:id="buttonRegistrar" layoutX="222.0" layoutY="409.0" mnemonicParsing="false" onAction="#registrarUsuario" prefHeight="42.0" prefWidth="76.0" text="Registrar" />
       <PasswordField fx:id="passwordField" layoutX="46.0" layoutY="297.0" />
    </children>
 </AnchorPane>

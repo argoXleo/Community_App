@@ -16,7 +16,7 @@
         <TextField fx:id="asuntoField" layoutX="150.0" layoutY="160.0" styleClass="mascotas-form" />
 
         <Label layoutX="20.0" layoutY="200.0" text="Descripción:" styleClass="label" style="-fx-font-size: 16px; -fx-text-fill: #333;" />
-        <TextArea fx:id="descripciónField" layoutX="150.0" layoutY="200.0" prefHeight="100.0" styleClass="mascotas-form" />
+        <TextArea fx:id="descripcionField" layoutX="150.0" layoutY="200.0" prefHeight="100.0" styleClass="mascotas-form" />
 
         <Button layoutX="150.0" layoutY="320.0" text="Enviar Queja" onAction="#registrarQueja" style="-fx-text-fill: black; -fx-background-color: #a8afb5; -fx-font-weight: bold; -fx-pref-width: 150; -fx-pref-height: 40;" />
         <Button layoutX="150.0" layoutY="370.0" text="Atrás" onAction="#volverAServiciosResident" style="-fx-text-fill: black; -fx-background-color: #a8afb5; -fx-font-weight: bold; -fx-pref-width: 100; -fx-pref-height: 30;" />

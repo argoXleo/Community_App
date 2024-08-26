@@ -41,7 +41,7 @@
                         <Image url="@images/Reportar Novedad.png" />
                      </image>
                   </ImageView>
-                  <Button layoutX="29.0" layoutY="186.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="142.0" styleClass="nav-btn" stylesheets="@Style.css" text="Reportar Novedad" />
+                  <Button fx:id="buttonReportarNovedadVigilante" layoutX="29.0" layoutY="186.0" mnemonicParsing="false" onAction="#ReportarNovedadVigilante" prefHeight="35.0" prefWidth="142.0" styleClass="nav-btn" stylesheets="@Style.css" text="Reportar Novedad" />
                </children>
             </AnchorPane>
          </children>
