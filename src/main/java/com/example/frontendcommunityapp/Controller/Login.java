@@ -9,7 +9,7 @@ import com.example.frontendcommunityapp.Model.Users.Vigilante;
 import java.sql.ResultSet;
 
 public class Login {
-
+    //
 
     public User userLogin(String userName, String password){
         String query = "SELECT * FROM usuarios WHERE username = '"+userName+"' AND password = '"+ password+"'";
