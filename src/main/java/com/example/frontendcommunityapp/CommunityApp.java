@@ -18,7 +18,7 @@ public class CommunityApp extends Application {
 
 
 
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RegistrarVisitante.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("RegistrarEntradaSalida.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);//fxmlLoader.load()
         stage.setTitle("CommunityApp");

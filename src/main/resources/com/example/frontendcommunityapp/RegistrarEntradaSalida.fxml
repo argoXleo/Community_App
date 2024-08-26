@@ -21,22 +21,28 @@
          </children></AnchorPane>
       <AnchorPane layoutX="2.0" layoutY="140.0" prefHeight="372.0" prefWidth="744.0" styleClass="nav-form" stylesheets="@Style.css">
          <children>
-            <Label layoutX="65.0" layoutY="111.0" prefHeight="60.0" prefWidth="251.0" text="Digite documento del Visitante" textFill="#f3f0f0">
+            <Label layoutX="57.0" layoutY="68.0" prefHeight="60.0" prefWidth="251.0" text="Digite documento del Visitante" textFill="#f3f0f0">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField layoutX="105.0" layoutY="171.0" prefHeight="35.0" prefWidth="171.0" />
-            <Button layoutX="471.0" layoutY="89.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="164.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registrar Entrada">
+            <TextField fx:id="tfDocIdentidadVisitor" layoutX="97.0" layoutY="128.0" prefHeight="35.0" prefWidth="171.0" />
+            <Button fx:id="buttonRegistrarEntrada" layoutX="471.0" layoutY="89.0" mnemonicParsing="false" onAction="#registrarEntrada" prefHeight="53.0" prefWidth="164.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registrar Entrada">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="471.0" layoutY="206.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="164.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registrar Salida">
+            <Button fx:id="buttonRegistrarSalida" layoutX="471.0" layoutY="206.0" mnemonicParsing="false" onAction="#registrarSalida" prefHeight="53.0" prefWidth="164.0" styleClass="nav-btn" stylesheets="@Style.css" text="Registrar Salida">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
+            <Label layoutX="151.0" layoutY="212.0" prefHeight="60.0" prefWidth="63.0" text="Estado" textFill="#f3f0f0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfEstadoRegistroSalidaEntrada" layoutX="97.0" layoutY="272.0" prefHeight="35.0" prefWidth="171.0" />
          </children>
       </AnchorPane>
    </children>
