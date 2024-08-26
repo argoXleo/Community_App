@@ -25,4 +25,17 @@ public class ServicesVigilanteController {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void salirVigilanteServices(ActionEvent actionEvent) {
+        try {
+            root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

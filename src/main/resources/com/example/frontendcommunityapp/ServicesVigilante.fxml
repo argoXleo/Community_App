@@ -19,7 +19,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="504.0" layoutY="33.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="65.0" styleClass="nav-btn" stylesheets="@Style.css" text="Salir" />
+            <Button fx:id="salirVigilanteServices" layoutX="504.0" layoutY="33.0" mnemonicParsing="false" onAction="#salirVigilanteServices" prefHeight="35.0" prefWidth="65.0" styleClass="nav-btn" stylesheets="@Style.css" text="Salir" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="6.0" layoutY="103.0" prefHeight="289.0" prefWidth="589.0" styleClass="nav-form" stylesheets="@Style.css">
