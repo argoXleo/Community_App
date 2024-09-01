@@ -10,15 +10,12 @@ import java.io.IOException;
 
 public class CommunityApp extends Application {
 
-
     /////
 
     @Override
     public void start(Stage stage) throws IOException {////
 
-
-
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ServicesResident.fxml"));
         Parent root = fxmlLoader.load();
         Scene scene = new Scene(root);//fxmlLoader.load()
         stage.setTitle("CommunityApp");

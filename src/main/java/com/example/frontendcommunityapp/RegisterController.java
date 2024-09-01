@@ -62,11 +62,6 @@ public class RegisterController {
 
 
 
-
-
-
-
-
     public void registrarUsuario(javafx.event.ActionEvent actionEvent) throws IOException {
 
         String nombre = textFieldNombre.getText();
@@ -123,11 +118,6 @@ public class RegisterController {
                 System.out.println("RadioButton is deselected.");
             }
         });
-
-
-
-
-
 
 
     }

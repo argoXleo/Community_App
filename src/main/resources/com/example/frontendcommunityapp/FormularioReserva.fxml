@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.FormularioReservaController">
+    <children>
+        <Label text="Formulario de Reserva" layoutX="20.0" layoutY="20.0" />
+
+        <Label text="Nombre de Residente:" layoutX="20.0" layoutY="60.0" />
+        <TextField fx:id="nombreField" layoutX="150.0" layoutY="60.0" />
+
+        <Label text="Casa o Apto:" layoutX="20.0" layoutY="100.0" />
+        <TextField fx:id="casaField" layoutX="150.0" layoutY="100.0" />
+
+        <Label text="Fecha de Reserva:" layoutX="20.0" layoutY="140.0" />
+        <DatePicker fx:id="fechaField" layoutX="150.0" layoutY="140.0" />
+
+        <Label text="Horario de Reserva:" layoutX="20.0" layoutY="180.0" />
+        <TextField fx:id="horarioField" layoutX="150.0" layoutY="180.0" />
+
+        <Label text="Número de Contacto:" layoutX="20.0" layoutY="220.0" />
+        <TextField fx:id="contactoField" layoutX="150.0" layoutY="220.0" />
+
+        <Button text="Reservar" onAction="#reservarArea" layoutX="150.0" layoutY="260.0" />
+        <Button text="Atrás" onAction="#volver" layoutX="250.0" layoutY="260.0" />
+    </children>
+</AnchorPane>
+

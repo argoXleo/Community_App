@@ -6,9 +6,9 @@ public class DbConnection {
 
     private final String dbUrl = "jdbc:mysql://localhost:3306/communityappdb";
 
-    private final String userName = "root";
+    private final String userName = "silvana";
 
-    private final String password = "_3GTh=FB<s{7l6B";
+    private final String password = "";
 
     private Statement getStatement(){
         try {

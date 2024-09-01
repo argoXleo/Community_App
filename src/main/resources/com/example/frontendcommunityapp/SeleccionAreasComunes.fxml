@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.AreasComunesController">
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Selecciona un Área Común" />
+
+        <!-- Área Común: Salón Social -->
+        <AnchorPane layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/salon_social.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="50.0" layoutY="160.0" text="Seleccionar Área" onAction="#reservarSalonSocial" />
+            </children>
+        </AnchorPane>
+
+        <!-- Área Común: Piscina -->
+        <AnchorPane layoutX="340.0" layoutY="60.0" prefHeight="200.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/piscina.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="50.0" layoutY="160.0" text="Seleccionar Área" onAction="#reservarPiscina" />
+            </children>
+        </AnchorPane>
+
+        <!-- Área Común: Juegos -->
+        <AnchorPane layoutX="660.0" layoutY="60.0" prefHeight="200.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/juegos.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="50.0" layoutY="160.0" text="Seleccionar Área" onAction="#reservarJuegos" />
+            </children>
+        </AnchorPane>
+
+        <!-- Área Común: Cancha Deportiva -->
+        <AnchorPane layoutX="20.0" layoutY="280.0" prefHeight="200.0" prefWidth="300.0">
+            <children>
+                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@images/canchadep.png" />
+                    </image>
+                </ImageView>
+                <Button layoutX="50.0" layoutY="160.0" text="Seleccionar Área" onAction="#reservarCanchaDeportiva" />
+
+                <Button text="Atrás" onAction="#volverServicesResident" layoutX="250.0" layoutY="260.0" />
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

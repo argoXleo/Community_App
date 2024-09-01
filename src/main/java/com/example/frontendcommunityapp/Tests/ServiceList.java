@@ -1,4 +1,4 @@
-
+/*
 package com.example.frontendcommunityapp.Tests;
 
 import com.example.frontendcommunityapp.Model.Services.Pago;
@@ -40,6 +40,3 @@ public class ServiceList {
 
     }
     */
-
-}
-
