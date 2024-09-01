@@ -3,27 +3,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.FormularioReservaController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.frontendcommunityapp.FormularioReservaController"
+            style="-fx-background-color: #f0f0f0;" prefWidth="500.0" prefHeight="450.0"> <!-- Tamaño preferido -->
     <children>
-        <Label text="Formulario de Reserva" layoutX="20.0" layoutY="20.0" />
+        <Label text="Formulario de Reserva" layoutX="20.0" layoutY="20.0"
+               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #003366;" />
 
-        <Label text="Nombre de Residente:" layoutX="20.0" layoutY="60.0" />
-        <TextField fx:id="nombreField" layoutX="150.0" layoutY="60.0" />
+        <Label text="Nombre de Residente:" layoutX="20.0" layoutY="80.0" style="-fx-font-size: 16px;" />
+        <TextField fx:id="nombreField" layoutX="200.0" layoutY="80.0" prefWidth="200.0" style="-fx-font-size: 16px;" />
 
-        <Label text="Casa o Apto:" layoutX="20.0" layoutY="100.0" />
-        <TextField fx:id="casaField" layoutX="150.0" layoutY="100.0" />
+        <Label text="Casa o Apto:" layoutX="20.0" layoutY="120.0" style="-fx-font-size: 16px;" />
+        <TextField fx:id="casaField" layoutX="200.0" layoutY="120.0" prefWidth="200.0" style="-fx-font-size: 16px;" />
 
-        <Label text="Fecha de Reserva:" layoutX="20.0" layoutY="140.0" />
-        <DatePicker fx:id="fechaField" layoutX="150.0" layoutY="140.0" />
+        <Label text="Fecha de Reserva:" layoutX="20.0" layoutY="160.0" style="-fx-font-size: 16px;" />
+        <DatePicker fx:id="fechaField" layoutX="200.0" layoutY="160.0" prefWidth="200.0" />
 
-        <Label text="Horario de Reserva:" layoutX="20.0" layoutY="180.0" />
-        <TextField fx:id="horarioField" layoutX="150.0" layoutY="180.0" />
+        <Label text="Horario de Reserva:" layoutX="20.0" layoutY="200.0" style="-fx-font-size: 16px;" />
+        <TextField fx:id="horarioField" layoutX="200.0" layoutY="200.0" prefWidth="200.0" style="-fx-font-size: 16px;" />
 
-        <Label text="Número de Contacto:" layoutX="20.0" layoutY="220.0" />
-        <TextField fx:id="contactoField" layoutX="150.0" layoutY="220.0" />
+        <Label text="Número de Contacto:" layoutX="20.0" layoutY="240.0" style="-fx-font-size: 16px;" />
+        <TextField fx:id="contactoField" layoutX="200.0" layoutY="240.0" prefWidth="200.0" style="-fx-font-size: 16px;" />
 
-        <Button text="Reservar" onAction="#reservarArea" layoutX="150.0" layoutY="260.0" />
-        <Button text="Atrás" onAction="#volver" layoutX="250.0" layoutY="260.0" />
+        <Button text="Reservar" onAction="#reservarArea" layoutX="200.0" layoutY="280.0"
+                style="-fx-font-size: 16px; -fx-background-color: #003366; -fx-text-fill: white;" />
+        <Button text="Atrás" onAction="#volver" layoutX="320.0" layoutY="280.0"
+                style="-fx-font-size: 16px; -fx-background-color: #003366; -fx-text-fill: white;" />
     </children>
 </AnchorPane>
-

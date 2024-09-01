@@ -4,12 +4,14 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.AreasComunesController">
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.frontendcommunityapp.AreasComunesController"
+            style="-fx-background-color: #87BEEB;"> <!-- Fondo azul -->
     <children>
-        <Label layoutX="20.0" layoutY="20.0" text="Selecciona un Área Común" />
+        <Label layoutX="20.0" layoutY="20.0" text="Selecciona un Área Común"
+               style="-fx-font-size: 24px; -fx-font-weight: bold;" /> <!-- Título más grande y en negrita -->
 
         <!-- Área Común: Salón Social -->
-        <AnchorPane layoutX="20.0" layoutY="60.0" prefHeight="200.0" prefWidth="300.0">
+        <AnchorPane layoutX="20.0" layoutY="60.0" prefHeight="180.0" prefWidth="220.0">
             <children>
                 <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                     <image>
@@ -53,9 +55,12 @@
                     </image>
                 </ImageView>
                 <Button layoutX="50.0" layoutY="160.0" text="Seleccionar Área" onAction="#reservarCanchaDeportiva" />
-
-                <Button text="Atrás" onAction="#volverServicesResident" layoutX="250.0" layoutY="260.0" />
             </children>
         </AnchorPane>
+
+        <!-- Botón Atrás mejor ubicado -->
+        <Button text="Atrás" onAction="#volverServicesResident" layoutX="600.0" layoutY="400.0" prefWidth="100.0" />
     </children>
 </AnchorPane>
+
+
