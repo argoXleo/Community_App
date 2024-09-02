@@ -8,9 +8,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
-import javafx.stage.Stage;
 import javafx.scene.control.TextField;
-
+import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -41,9 +40,8 @@ public class RegistroMascotasResidentController {
 
     @FXML
     public void initialize() {
-
+        // Inicialización si es necesaria
     }
-
 
     public void registrarMascota(ActionEvent actionEvent) {
         try {
@@ -53,33 +51,49 @@ public class RegistroMascotasResidentController {
 
             if (nombre.isEmpty() || raza.isEmpty() || idCasaAptoText.isEmpty()) {
                 logger.log(Level.WARNING, "Todos los campos deben ser completados.");
+                messageVerifyRegister.setText("Por favor completa todos los campos.");
                 return;
             }
 
             int idUsuario = Integer.parseInt(idCasaAptoText);
             boolean perdido = checkBoxPerdido.isSelected();
 
-            RegistroMascotas registro = new RegistroMascotas(nombre, raza, idUsuario, perdido);
-            registro.registrarMascota();
+            RegistroMascotas registroMascotas = new RegistroMascotas(nombre, raza, idUsuario, perdido);
 
-            System.out.println("RegistroMascotas registrada: " + nombre);
+            // Verificar si la mascota ya está registrada como perdida
+            if (registroMascotas.existeMascotaPerdida()) {
+                if (!perdido) {
+                    // La mascota ha sido encontrada
+                    registroMascotas.actualizarMascota();
+                    messageVerifyRegister.setText("La mascota ha sido encontrada. Registro guardado exitosamente");
+                } else {
+                    // La mascota ya está registrada como perdida
+                    messageVerifyRegister.setText("La mascota ya está registrada como perdida.");
+                }
+            } else {
+                // La mascota no está registrada como perdida
+                registroMascotas.registrarMascota();
+                if (perdido) {
+                    messageVerifyRegister.setText("La mascota ha sido reportada como perdida." +
+                            " En caso de encontrarla por favor actualice el registro");
+                } else {
+                    messageVerifyRegister.setText("Mascota registrada exitosamente.");
+                }
+            }
+
+            logger.log(Level.INFO, "Mascota registrada exitosamente.");
         } catch (NumberFormatException e) {
-            logger.log(Level.WARNING, "ID de usuario no válido.");
-        } catch (Exception e) {
-            logger.log(Level.SEVERE, "Error al registrar mascota", e);
+            logger.log(Level.SEVERE, "Error al convertir el ID de casa/apto a entero.", e);
+            messageVerifyRegister.setText("Error al convertir el ID de casa/apto a entero.");
         }
-
-        messageVerifyRegister.setText("Mascota Registrada");
     }
 
-    public void volverAServiciosResident(ActionEvent event) throws IOException {
-        // Obtén el Stage de la ventana actual
+    public void volver(ActionEvent event) throws IOException {
         Stage stageActual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-
         // Cierra la ventana actual
         stageActual.close();
 
-        // Carga la escena de "ServicesResident.fxml"
+        // Carga la escena de anterior
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ServicesResident.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root);
@@ -90,3 +104,4 @@ public class RegistroMascotasResidentController {
         nuevoStage.show();
     }
 }
+//

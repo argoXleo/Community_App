@@ -19,7 +19,7 @@
                               <Image url="@images/Pets.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="buttonMascotasResident" layoutX="45.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchMascotasView" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" text="Mascotas" />
+                        <Button fx:id="buttonMascotasResident" layoutX="20.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchMascotasView" prefHeight="48.0" prefWidth="160.0" styleClass="nav-btn" text="Registro Mascotas" />
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutX="599.0" layoutY="139.0" prefHeight="213.0" prefWidth="210.0">
@@ -49,7 +49,7 @@
                               <Image url="@images/Dollar.png" />
                            </image>
                         </ImageView>
-                        <Button fx:id="buttonPagos" layoutX="45.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchToPagosPage" prefHeight="48.0" prefWidth="121.0" styleClass="nav-btn" text="Pagos" />
+                        <Button fx:id="buttonPagos" layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#switchToPagosPage" prefHeight="48.0" prefWidth="150.0" styleClass="nav-btn" text="Realizar Pagos" />
                      </children>
                   </AnchorPane>
                   <Button fx:id="salirResidente" layoutX="28.0" layoutY="26.0" mnemonicParsing="false" onAction="#salirResidente" prefHeight="32.0" prefWidth="62.0" styleClass="nav-btn" text="Salir" />

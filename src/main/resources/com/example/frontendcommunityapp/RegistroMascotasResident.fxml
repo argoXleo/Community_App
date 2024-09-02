@@ -3,21 +3,27 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="40.0" stylesheets="@Style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.frontendcommunityapp.RegistroMascotasResidentController">
+<VBox alignment="CENTER" prefHeight="400" prefWidth="600" spacing="20.0" stylesheets="@Style.css" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.2-ea" fx:controller="com.example.frontendcommunityapp.RegistroMascotasResidentController">
 
-    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" styleClass="text-color" text="Mascotas" />
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" styleClass="text-color" text="Registro de Mascotas" />
 
-    <VBox alignment="CENTER" spacing="30.0">
+    <VBox alignment="CENTER" spacing="10.0">
+        <Label text="Nombre de la mascota:" />
         <TextField fx:id="textFieldNombreMascota" prefWidth="200" promptText="Nombre de la mascota" styleClass="mascotas-form" />
+
+        <Label text="Raza de la mascota:" />
         <TextField fx:id="textFieldRaza" prefWidth="200" promptText="Raza de la mascota" styleClass="mascotas-form" />
+
+        <Label text="Casa o Apartamento No°:" />
         <TextField fx:id="textFieldIdCasaApto" prefWidth="200" promptText="Casa o Apartamento No°" styleClass="mascotas-form" />
     </VBox>
 
     <CheckBox fx:id="checkBoxPerdido" styleClass="mascotas-form" text="Reportar como perdido" />
 
     <HBox alignment="CENTER" spacing="20.0">
-        <Button fx:id="buttonAtrasPagarResident" mnemonicParsing="false" onAction="#volverAServiciosResident" prefHeight="35.0" prefWidth="100.0" style="-fx-background-color: #848e96; -fx-text-fill: white;" styleClass="nav-btn" text="Atras" />
-        <Button fx:id="buttonRegistrar" onAction="#registrarMascota" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #848e96; -fx-text-fill: white;" styleClass="nav-btn" text="Registrar Mascota" />
-      <TextField fx:id="messageVerifyRegister" prefHeight="25.0" prefWidth="122.0" />
+        <Button fx:id="buttonAtrasPagarResident" mnemonicParsing="false" onAction="#volver" prefHeight="30.0" prefWidth="60.0" style="-fx-background-color: #848e96; -fx-text-fill: white;" styleClass="nav-btn" text="Atras" />
+        <Button fx:id="buttonRegistrar" onAction="#registrarMascota" prefHeight="30.0" prefWidth="150.0" style="-fx-background-color: #848e96; -fx-text-fill: white;" styleClass="nav-btn" text="Registrar Mascota" />
     </HBox>
+
+    <TextField fx:id="messageVerifyRegister" prefHeight="40.0" prefWidth="300.0" editable="false" styleClass="mascotas-form" promptText="Mensajes de verificación" />
 </VBox>

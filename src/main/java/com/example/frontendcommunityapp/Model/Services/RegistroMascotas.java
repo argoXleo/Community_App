@@ -1,4 +1,5 @@
 package com.example.frontendcommunityapp.Model.Services;
+
 import com.example.frontendcommunityapp.Controller.DbConnection;
 
 public class RegistroMascotas extends Services {
@@ -33,51 +34,72 @@ public class RegistroMascotas extends Services {
     }
 
     public void registrarMascota() {
-        String query = "INSERT INTO mascotas(nombre, tipo_animal, id_usuario, perdido) VALUES ('"
-                + this.nombreMascota + "', '"
-                + this.raza + "', "
-                + this.idCasaApto + ", "
-                + (this.perdido ? 1 : 0) + ")";
-
         DbConnection connection = new DbConnection();
+        String query = "SELECT COUNT(*) FROM mascotas WHERE nombre = '" + this.nombreMascota +
+                "' AND tipo_animal = '" + this.raza + "' AND id_usuario = " + this.idCasaApto;
+
         try {
-            int result = connection.updateDataBase(query);
-            if (result > 0) {
-                System.out.println("RegistroMascotas registrada exitosamente.");
+            int count = connection.getCount(query);
+            if (count > 0) {
+                // Si la mascota ya está registrada, muestra un mensaje
+                System.out.println("La mascota ya se encuentra registrada.");
+                return; // Salir del método, ya no es necesario continuar
             } else {
-                System.out.println("Error al registrar la registroMascotas.");
+                // Si la mascota no está registrada, realiza el registro
+                String insertQuery = "INSERT INTO mascotas(nombre, tipo_animal, id_usuario, perdido) VALUES ('"
+                        + this.nombreMascota + "', '"
+                        + this.raza + "', "
+                        + this.idCasaApto + ", "
+                        + (this.perdido ? 1 : 0) + ")";
+
+                int result = connection.updateDataBase(insertQuery);
+                if (result > 0) {
+                    System.out.println("Mascota registrada exitosamente.");
+                } else {
+                    System.out.println("Error al registrar la mascota.");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    public void registrarMascotaDB(RegistroMascotas mascotaRegistrada){
-        String query = "INSERT INTO mascotas(nombre, tipo_animal, id_usuario, perdido) VALUES ('"
-                + mascotaRegistrada.getNombreMascota() + "', '"
-                + mascotaRegistrada.getRaza() + "', "
-                + mascotaRegistrada.getIdCasaApto() + ", "
-                + mascotaRegistrada.isPerdido() + ")";
-
+    public boolean existeMascotaPerdida() {
         DbConnection connection = new DbConnection();
+        String query = "SELECT COUNT(*) FROM mascotas WHERE nombre = '" + this.nombreMascota +
+                "' AND tipo_animal = '" + this.raza + "' AND id_usuario = " + this.idCasaApto +
+                " AND perdido = 1";
+
         try {
-            int result = connection.updateDataBase(query);
+            int count = connection.getCount(query);
+            return count > 0;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public void actualizarMascota() {
+        DbConnection connection = new DbConnection();
+        String updateQuery = "UPDATE mascotas SET perdido = 0 WHERE nombre = '" + this.nombreMascota +
+                "' AND tipo_animal = '" + this.raza +
+                "' AND id_usuario = " + this.idCasaApto;
+
+        try {
+            int result = connection.updateDataBase(updateQuery);
             if (result > 0) {
-                System.out.println("RegistroMascotas registrada exitosamente.");
+                System.out.println("Estado de la mascota actualizado exitosamente a encontrado.");
             } else {
-                System.out.println("Error al registrar la registroMascotas.");
+                System.out.println("Error al actualizar el estado de la mascota.");
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
-
-
-
 
     public static void main(String[] args) {
         RegistroMascotas pet1 = new RegistroMascotas("tin", "Labrador", 123, false);
-        pet1.registrarMascotaDB(pet1);
+        pet1.registrarMascota();
     }
 }
+//
